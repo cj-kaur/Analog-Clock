@@ -1,0 +1,115 @@
+.page-layout {
+	display: grid;
+	grid-template-rows: 0.99fr 0.01fr;
+	height: 100vh;
+	width: 100vw;
+	background: url(https://images.unsplash.com/photo-1670510521067-2e94183f9803?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	font-family: roboto, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+main {
+	/* background-color: beige; */
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+#date {
+	color: aliceblue;
+	font-size: 2rem;
+	font-family: roboto, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+footer {
+	/* background-color: rgba(0, 0, 0, 0.153); */
+	background: linear-gradient(
+		0deg,
+		rgb(28, 27, 35) 0%,
+		rgba(28, 27, 35, 0.807) 35%,
+		rgba(28, 27, 35, 0) 100%
+	);
+}
+
+.credits {
+	text-align: center;
+	margin: 0 auto;
+	color: rgba(212, 212, 212, 0.421);
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	gap: 0.3rem;
+	margin: 0.4rem auto;
+}
+
+.clock-ctn {
+	width: 20rem;
+	height: 20rem;
+	border-radius: 50%;
+	border: 2px double whitesmoke;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	transform: rotate(90deg);
+	background: radial-gradient(
+		circle at 50% 50%,
+		rgba(255, 255, 255, 0),
+		rgba(255, 255, 255, 0.174)
+	);
+}
+.clock-body {
+	width: 19.5rem;
+	height: 19.5rem;
+	border-radius: 50%;
+	border: 2px dotted rgba(255, 255, 255, 0.288);
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	/* align-items: center; */
+	justify-content: center;
+}
+.transition {
+	transition: all 0.5s cubic-bezier(0, 1.81, 1, 0.36);
+}
+.hours-hand {
+	/* transition: all 0.5s cubic-bezier(0, 1.81, 1, 0.36); */
+	position: absolute;
+	right: 50%;
+	transform-origin: 100%;
+	width: 8rem;
+	height: 0.2rem;
+	background-color: whitesmoke;
+	border-radius: 0.4rem;
+	transform: rotate(15deg);
+}
+.minutes-hand {
+	/* transition: all 0.5s cubic-bezier(0, 1.81, 1, 0.36); */
+	right: 50%;
+	transform-origin: 100%;
+	position: absolute;
+	width: 6.5rem;
+	height: 0.2rem;
+	background-color: whitesmoke;
+	border-radius: 0.4rem;
+	transform: rotate(25deg);
+}
+.seconds-hand {
+	/* transition: all 0.3s ease-in-out; */
+	/* transition: all 0.5s cubic-bezier(0, 1.81, 1, 0.36); */
+	right: 50%;
+	transform-origin: 100%;
+	/* transform: rotate(45deg); */
+	position: absolute;
+	width: 8rem;
+	height: 0.09rem;
+	background-color: rgba(255, 255, 255, 0.311);
+	border-radius: 0.4rem;
+}
